@@ -1,0 +1,9 @@
+<input class="input-search" type="search" placeholder="Search country.." name="country" id="country" (keyup)="searchCountry($event)" />
+<hr style="width: 520px;" /><br/>
+<div *ngFor="let country of allCountries" class="border">
+  <span class="text-blue">{{ country['name'].common }}</span>
+  <span class="text-left">Population</span>
+  <br/>
+  <span>{{ country['capital'] }} , </span><span class="text-darkgray">{{ country['subregion'] }}</span>
+  <span style="float: right;">{{ country['population'] }}</span>
+</div>
